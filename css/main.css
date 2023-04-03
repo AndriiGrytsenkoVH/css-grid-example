@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+}
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 10vh auto auto ;
+
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar navbar"
+    ". prof-pic prof-info prof-info prof-info ."
+    ". posts posts posts posts .";
+    
+}
+
+.prof-pic{
+    grid-area: prof-pic;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.prof-info{
+    grid-area: prof-info;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 5vw;
+}
+
+.prof-info > h1{
+    align-self: center;
+}
+
+.prof-pic{
+    grid-area: prof-pic;
+    display: flex;
+    align-items: center;
+    
+}
+
+.posts{
+    grid-area: posts;
+}
+
+#profPic{
+    width: 100%;
+    height: auto;
+    
+}
+
+.post-card{
+    border: 1px solid black;
+    padding: 2%;
+    margin: 2vh 0;
+}
+
+.card-links{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.card-links > a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.card-links > a:hover{
+    text-decoration: underline;
+    background-color: dodgerblue;
+    color: white;
+}
